@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .slider{
+        position: relative;
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+    }
+    .slider img{
+        width: 100%;
+        display: none;
+    }
+    img.displaySlide{
+        display:block;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    
+    .slider button{
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        padding: 10px 15px;
+        background-color: hsla(0, 0%, 0%, 0.5);
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+    .prev{
+        left: 0;
+    }
+    .next{
+        right: 0;
+    }
+    @keyframes fade{
+        from{opacity: .5;}
+        to{opacity: 1;}
+    }
+    
+    </style>
+<body>
+    <div class = "slider">
+        <div class="slides">
+            <img class="slide" src="1st.jpg" alt="1st">
+            <img class="slide" src="2nd.jpg" alt="2nd">
+            <img class="slide" src="3rd.jpg" alt="3rd">
+            <img class="slide" src="4th.jpg" alt="4th">
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094</button>
+        <button class="next" onclick="nextSlide()">&#10095</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

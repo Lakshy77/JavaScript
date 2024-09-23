@@ -1,0 +1,9 @@
+{
+    "name":"SpngeBob",
+    "age": 30,
+    "isEmployed": true,
+    "spouse": {
+        "name": "Squidward",
+        "age": 40
+    }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("diceimages/diceback.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+       
+        #cointainer{
+            font-family: Arial,sans-serif;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        button{
+            font-size: 1.5rem;
+            padding: 10px 15px;
+            border-radius: 10px;
+            border: none;
+            background-color: hsl(210,100%,50%);
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        button:hover{
+            background-color: hsl(210,100%,40%);
+        }
+        button:active{
+            background-color: hsl(210,70%,30%);
+        }
+        input{
+            font-size:2rem;
+            width: 150px;
+            text-align: center;
+            font-weight: bold;
+        }
+        #diceResult{
+            margin: 25px;
+        }
+        #diceImages img{
+            width:150px;
+            margin:5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="cointainer">
+        <h1>Dice Roller</h1>
+        <label># of dice:</label>
+        <input type="number" id="numofDice" value="1" min="1"><br>
+        <button onclick="rollDice()">Roll Dice</button>
+        <div id="diceResult"></div>
+        <div id="diceImages"></div>
+    </div>
+
+    <script src="diceroller.js"></script>
+</body>
+</html>
